@@ -15,17 +15,16 @@ public class ReverseReader extends FileReader {
     @Override
     public void readFile() {
         String line = null;
-        StringBuilder builder = new StringBuilder();
         this.content.clear();
 
         try {
             while((line = this.file.readLine())!= null) {
                 this.content.add(line);
-                builder.append(line);
             }
 
-            builder.reverse();
-            System.out.println(builder);
+            for(int i = this.content.size()-1; i >= 0; i--) {
+                System.out.println(content.get(i));
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }

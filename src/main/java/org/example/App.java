@@ -15,12 +15,12 @@ public class App
 {
     public static void main( String[] args )
     {
+        Scanner scanner = new Scanner(System.in);
+        String filePath;
+
         NormalReader reader = new NormalReader();
         ReverseReader reverseReader = new ReverseReader();
         PalindromeReader palindromeReader = new PalindromeReader();
-
-        Scanner scanner = new Scanner(System.in);
-        String filePath = "";
 
         System.out.println("Please enter a file path : ");
         filePath = scanner.nextLine();
